@@ -26,6 +26,55 @@ The workspace provided in the SFND classroom comes preinstallated with everythin
 
 ## Local Installation
 
+### Docker (Tested for MAC)
+1. Clone this github repo:
+
+   ```sh
+   cd ~
+   git clone https://github.com/udacity/SFND_Lidar_Obstacle_Detection.git
+   ```
+   
+2. Download [Docker](https://www.docker.com/?utm_source=google&utm_medium=cpc&utm_campaign=dockerhomepage&utm_content=namer&utm_term=dockerhomepage&utm_budget=growth&gclid=Cj0KCQjw5uWGBhCTARIsAL70sLL1Q_1svjN2UNUrTqEdBaXGoQLUncdxX_eylm5fa5Z-YsMFJn0CJUkaAv5pEALw_wcB)
+3. Install [XQuartz](https://www.xquartz.org/)
+4. Allow OpenGL drawing (iglx):
+    ```sh
+    defaults write org.xquartz.X11 enable_iglx -bool true
+    
+    defaults read org.macosforge.xquartz.X11
+    {
+        "app_to_run" = "/opt/X11/bin/xterm";
+        "cache_fonts" = 1;
+        "done_xinit_check" = 1;
+        "enable_iglx" = 1; ####### this should be '1'
+        "login_shell" = "/bin/sh";
+        "no_auth" = 0;
+        "nolisten_tcp" = 0;
+        "startx_script" = "/opt/X11/bin/startx -- /opt/X11/bin/Xquartz";
+    }
+    ```
+5. Go in the root of the project and enable docker commands to run
+   ```sh
+   
+   ```
+6. Start docker image
+   ```sh
+   ```
+6. Get inside your docker container
+   ```sh
+   ```
+7. Execute the following commands in a terminal
+
+   ```shell
+   sudo apt install libpcl-dev
+   cd ~/SFND_Lidar_Obstacle_Detection
+   mkdir build && cd build
+   cmake ..
+   make
+   ./environment
+   ```
+
+   This should install the latest version of PCL. You should be able to do all the classroom exercises and project with this setup.
+
 ### Ubuntu 
 
 1. Clone this github repo:
